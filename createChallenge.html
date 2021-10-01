@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>EcoFun - Lets build a sustainable future</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Responsive navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container px-5">
+            <a class="navbar-brand" href="#!">EcoFun</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#!">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="LeaderBoard.html">Leaderboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#!">Log Out</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Page Content-->
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-11 col-sm-10 col-md-10 col-lg-6 col-xl-6 text-center p-0 mt-3 mb-2">
+                <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+                    <h2 id="heading">Build your custom challenge</h2>
+                    <p>Fill in the details to create your Customized challenge</p>
+                    <form id="msform">
+                        <!-- progressbar -->
+                        <ul id="progressbar">
+                            <li class="active" id="account"><strong>Challenge</strong></li>
+                            <li id="personal"><strong>Challenge Category</strong></li>
+                            <li id="payment"><strong>Goals</strong></li>
+                            <li id="rewards"><strong>Rewards</strong></li>
+                            <li id="confirm"><strong>Finish</strong></li>
+                        </ul>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div> <br> <!-- fieldsets -->
+                        <fieldset>
+                            <div class="form-card">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <h2 class="fs-title">Challenge Information:</h2>
+                                    </div>
+                                    <div class="col-5">
+                                        <h2 class="steps">Step 1 - 5</h2>
+                                    </div>
+                                </div> <label class="fieldlabels">Challenge Name: *</label> <input type="text"
+                                    name="challengeName" placeholder="Challenge Name" /> <label
+                                    class="fieldlabels">Challenge description: *</label> <textarea name="desc" placeholder="Description" rows="3"></textarea> 
+                                    <label
+                                    class="fieldlabels">Upload Image: *</label>
+                                    <input type="file" class="custom-file-input" id="imageChallenge">
+                                   
+                            </div> <input type="button" name="next" class="next action-button" value="Next" />
+                        </fieldset>
+                        <fieldset class="show">
+                            <div class="form-card">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <h2 class="fs-title">Select Challenge Category:</h2>
+                                    </div>
+                                    <div class="col-5">
+                                        <h2 class="steps">Step 2 - 5</h2>
+                                    </div>
+                                </div>
+                                <div class="row row-cols-1 row-cols-md-2 g-4">
+                                    <div class="card">
+                                        <div> <img class="icon icon1" src="Quiz.jpg"> </div>
+                                       
+                                        <label class="fieldlabels" for="challengeCategory1">Quiz Challenge</label>
+                                        <input type="radio" name="challengeCategory" id="challengeCategory1">
+                                    </div>
+                                    <div class="card">
+                                        <div > <img class="icon icon1 " src="photo.jpg"> </div>
+                                        <label class="fieldlabels" for="challengeCategory2">Photo Challenge</label>
+                                        <input type="radio" name="challengeCategory" id="challengeCategory2">
+                                    </div>
+                                    <div class="card">
+                                        <div > <img class="icon icon1 " src="video.jpg"> </div>
+                                        <label class="fieldlabels" for="challengeCategory3">Video Challenge</label>
+                                        <input type="radio" name="challengeCategory" id="challengeCategory3">
+                                    </div>
+                                    <div class="card">
+                                        <div > <img class="icon icon1 " src="Outdoor.jpg"> </div>
+                                        <label class="fieldlabels" for="challengeCategory4">Outdoor Challenge (Location Based)</label>
+                                        <input type="radio" name="challengeCategory" id="challengeCategory4">
+                                    </div>
+                                </div> 
+                            </div>
+                            <input type="button" name="next" class="next action-button" value="Next" /> <input
+                                type="button" name="previous" class="previous action-button-previous"
+                                value="Previous" />
+                        </fieldset>
+                        <fieldset>
+                            <div class="form-card">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <h2 class="fs-title">Goal Setting:</h2>
+                                    </div>
+                                    <div class="col-5">
+                                        <h2 class="steps">Step 3 - 5</h2>
+                                    </div>
+                                </div> <label class="fieldlabels">Number of days: *</label> <input type="text"
+                                name="noofdays" placeholder="Number of days" /> <label
+                                class="fieldlabels">Objects to be detected: *</label> <textarea name="objectName" placeholder="Object name" rows="3"></textarea> 
+                                <label class="fieldlabels">Invites (Email Address): *</label> <input type="text"
+                                name="inviteEmlAddr" placeholder="Email Address" />
+                            </div> <input type="button" name="next" class="next action-button" value="Next" /> <input
+                                type="button" name="previous" class="previous action-button-previous"
+                                value="Previous" />
+                        </fieldset>
+                        <fieldset>
+                            <div class="form-card">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <h2 class="fs-title">Rewards:</h2>
+                                    </div>
+                                    <div class="col-5">
+                                        <h2 class="steps">Step 4 - 5</h2>
+                                    </div>
+                                </div> <label class="fieldlabels">Number of points: *</label> <input type="text"
+                                name="noofpoints" placeholder="Number of points per activity" /> 
+                                <label
+                                    class="fieldlabels">Upload Badge: *</label>
+                                    <input type="file" class="custom-file-input" id="badge">
+                            </div> <input type="button" name="next" class="next action-button" value="Submit" /> <input
+                                type="button" name="previous" class="previous action-button-previous"
+                                value="Previous" />
+                        </fieldset>
+                        <fieldset>
+                            <div class="form-card">
+                                <div class="row">
+                                    <div class="col-7">
+                                        <h2 class="fs-title">Finish:</h2>
+                                    </div>
+                                    <div class="col-5">
+                                        <h2 class="steps">Step 5 - 5</h2>
+                                    </div>
+                                </div> <br><br>
+                                <h2 class="purple-text text-center"><strong>SUCCESS !</strong></h2> <br>
+                                <div class="row justify-content-center">
+                                    <div class="col-3"> <img src="GwStPmg.png" class="fit-image">
+                                    </div>
+                                </div> <br><br>
+                                <div class="row justify-content-center">
+                                    <div class="col-7 text-center">
+                                        <h5 class="purple-text text-center">You Have Successfully Created a Challenge</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer-->
+    <footer class="py-4 bg-dark">
+        <div class="container px-3 px-lg-4">
+            <p class="m-0 text-center text-white">Copyright &copy; EcoFun 2021</p>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Jquery core JS-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
