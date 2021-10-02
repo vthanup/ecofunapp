@@ -14,7 +14,7 @@
   display: flex;
   justify-content: center;
   /* align-items: center; */
-  min-height: 90vh;
+  /* min-height: 90vh; */
   flex-wrap: wrap;
   background: linear-gradient(to bottom right, #38A3A5, #57CC99, #80ED99);
   background-image: url(green3.jfif);
@@ -110,7 +110,7 @@
 }
 
 .fa-caret-up{
-  color: cyan;
+  color: rgb(236, 68, 68);
   font-size: 21px;
 }
 
