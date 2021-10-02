@@ -118,9 +118,31 @@
                                     <div class="col-5">
                                         <h2 class="steps">Step 3 - 5</h2>
                                     </div>
-                                </div> <label class="fieldlabels">Number of days: *</label> <input type="text"
-                                name="noofdays" placeholder="Number of days" /> <label
-                                class="fieldlabels">Objects to be detected: *</label> <textarea name="objectName" placeholder="Object name" rows="3"></textarea> 
+                                </div> <label class="fieldlabels">Number of days: *</label> <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+                                <datalist id="datalistOptions">
+                                  <option value="1">
+                                  <option value="2">
+                                  <option value="3">
+                                  <option value="4">
+                                  <option value="5">
+                                  <option value="6">
+                                  <option value="7">    
+                                  <option value="8">    
+                                  <option value="9">    
+                                </datalist> <label
+                                class="fieldlabels">Objects to be detected: *</label> <select multiple aria-label="multiple select example">
+                                  <option value="Reusable bags" onclick="setVisibility('customDiv','none')">Reusable bags</option>
+                                  <option value="Reusable Mask" onclick="setVisibility('customDiv','none')">Reusable Mask</option>
+                                  <option value="Cycle" onclick="setVisibility('customDiv','none')">Cycle</option>
+                                  <option value="Tree" onclick="setVisibility('customDiv','none')">Tree</option>
+                                  <option value="Plants"  onclick="setVisibility('customDiv','none')">Plants</option>
+                                  <option value="Lights"  onclick="setVisibility('customDiv','none')">Enery Saving Lights</option>
+                                  <option value="Custom" onclick="setVisibility('customDiv','block')">  Custom  </option>
+                                </select>
+                                <div style="display: none;" id="customDiv">
+                                <label class="fieldlabels">Custom Object Name: *</label> <input type="text"
+                                name="customObj" placeholder="Custom Object Name" />
+                                </div>
                                 <label class="fieldlabels">Invites (Email Address): *</label> <input type="text"
                                 name="inviteEmlAddr" placeholder="Email Address" />
                             </div> <input type="button" name="next" class="next action-button" value="Next" /> <input
@@ -184,6 +206,12 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
+    <script>
+function setVisibility(objName, attr){
+    document.getElementById(objName).setAttribute("style","display: "+attr);
+}
+
+    </script>
 </body>
 
 </html>

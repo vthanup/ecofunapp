@@ -58,16 +58,16 @@
                             <h2 class="card-title">Clean Air Challenge</h2>
                             <p class="card-text">Cycling as a mode of transport is a low-cost, health-improving way to travel and offers environmental benefits</p>
                         </div>
-                        <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">Register</a></div>
+                        <div class="card-footer"><button type="button" id="cleanAir1" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modall1">Register</button></div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-5">
                     <div class="card h-100">
                         <div class="card-body">
                             <h2 class="card-title">Eco Care Challenge</h2>
-                            <p class="card-text">Use reusable bags and save the lives of more than a million seabirds and 100,000 marine animals every year.</p>
+                            <p class="card-text">Use reusable items and save the lives of more than a million seabirds and 100,000 marine animals every year.</p>
                         </div>
-                        <div class="card-footer"><a class="btn btn-info btn-sm" href="#!">Resume</a></div>
+                        <div class="card-footer"><button type="button" class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#modall2">Resume</button></div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-5">
@@ -76,7 +76,7 @@
                             <h2 class="card-title">Green Day</h2>
                             <p class="card-text">A vegan diet has the lowest carbon footprint at just 1.5 tons CO2e (Carbon Dioxide Equivalent). You can reduce your foodprint by a quarter just by cutting down on red meats such as beef and lamb.</p>
                         </div>
-                        <div class="card-footer"><a class="btn btn-primary btn-sm" href="#!">Register</a></div>
+                        <div class="card-footer"><button type="button" class="btn btn-primary btn-sm" href="#!">Register</button></div>
                     </div>
                 </div>
             </div>
@@ -84,8 +84,54 @@
 
            
               </div>
-
         </div>
+        <div class="modal fade " id="modall1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">10 Days - Clean Air Challenge</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>Description</h5>
+                    <p>Cycling as a mode of transport is a low-cost, health-improving way to travel and offers environmental benefits. Use Cycle as a mode of transport for next 10 days to earn points</p>
+            <p>Earn points for each kilometer covered</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary btn-sm" data-bs-dismiss="modal" onclick="setLabel('Resume','cleanAir1')">Enroll Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade" id="modall2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">5 Days - Eco Care Challenge</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>Description</h5>
+                    <p>Use reusable items and save the lives of more than a million seabirds and 100,000 marine animals every year.</p>
+                    <p>Earn 10 points for each activities</p>
+                    <h6>Day 1 Challenge</h6>
+                    <p>Earn 10 points by uploading pic using Reusable Bags</p>
+                    <label
+                    class="fieldlabels">Upload Image: *</label>
+                    <input type="file" class="custom-file-input" id="imageChallenge">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info btn-sm" style="float: left;" id="heartId" onclick="setAttr('heartId','#fff')">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+          <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"></path>
+        </svg>
+                      </button> <button type="button" class="btn btn-primary btn-sm" data-bs-dismiss="modal" >OK</button>
+                </div>
+              </div>
+            </div>
+          </div>
+         
         <!-- Footer-->
         <footer class="py-4 bg-dark">
             <div class="container px-3 px-lg-4"><p class="m-0 text-center text-white">Copyright &copy; EcoFun 2021</p></div>
@@ -98,5 +144,16 @@
     
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script>
+            function setLabel(labelDesc, elementId){
+              document.getElementById(elementId).innerHTML="Resume";
+              document.getElementById(elementId).setAttribute("class","btn btn-info btn-sm");
+              
+            }
+            function setAttr(objId, attr){
+                document.getElementById("heartId").setAttribute("style","background-color: rgb(236, 68, 68)");
+            }
+      
+          </script>
     </body>
 </html>
